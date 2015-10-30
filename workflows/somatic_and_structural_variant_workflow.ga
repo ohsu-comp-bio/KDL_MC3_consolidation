@@ -1,0 +1,2242 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "ptrl_exome_workflow", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Tumor Forward FASTQ File"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 203, 
+                "top": 728
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Tumor Forward FASTQ File\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "2681465f-ed0b-4398-a3da-be9f3a2f3726"
+        }, 
+        "1": {
+            "annotation": "", 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Tumor Reverse FASTQ File"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 204, 
+                "top": 817
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Tumor Reverse FASTQ File\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "06245528-c16d-4d00-9fc3-951ad3512cb5"
+        }, 
+        "2": {
+            "annotation": "For BWA-MEM / GATK", 
+            "id": 2, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "For BWA-MEM / GATK", 
+                    "name": "Reference Genome"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 200, 
+                "top": 1125
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Reference Genome\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "fa36cfbe-7e8e-4e3d-847b-3fd76e377302"
+        }, 
+        "3": {
+            "annotation": "", 
+            "id": 3, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Normal Forward FASTQ File"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 209, 
+                "top": 1411
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Normal Forward FASTQ File\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "78fc0d2f-ae0f-48c6-9ad6-bcff62cdb929"
+        }, 
+        "4": {
+            "annotation": "", 
+            "id": 4, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Normal Reverse FASTQ File"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 213, 
+                "top": 1508
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Normal Reverse FASTQ File\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "78bda779-66c5-43e1-984e-7b4fc6b11a1f"
+        }, 
+        "5": {
+            "annotation": "Mills reference for known Indels", 
+            "id": 5, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Mills reference for known Indels", 
+                    "name": "Mills"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 1040, 
+                "top": 1093
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Mills\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "63b178e7-25e2-458c-a85b-dc09f8117a3d"
+        }, 
+        "6": {
+            "annotation": "Known SNPs from dbSNP", 
+            "id": 6, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Known SNPs from dbSNP", 
+                    "name": "DBSNP"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 1692, 
+                "top": 1095
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"DBSNP\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "c1b4afb1-c9b3-448d-b2fa-ac5cde3eb2b9"
+        }, 
+        "7": {
+            "annotation": "Known SNPs from the 1000 Genomes project", 
+            "id": 7, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Known SNPs from the 1000 Genomes project", 
+                    "name": "1000G"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 1690, 
+                "top": 1208
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"1000G\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "82052587-1cd0-4803-a44e-41a54ccd0938"
+        }, 
+        "8": {
+            "annotation": "", 
+            "id": 8, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "PROBES"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 2481, 
+                "top": 598
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"PROBES\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "fdbc391d-3b8b-42a5-bfb7-bc45a51fc348"
+        }, 
+        "9": {
+            "annotation": "", 
+            "id": 9, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "EXONS"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 3416, 
+                "top": 1189
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"EXONS\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "3db61822-4267-495e-9cc1-7da497babe0b"
+        }, 
+        "10": {
+            "annotation": "", 
+            "id": 10, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "QC_GENES"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 3416, 
+                "top": 1116
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"QC_GENES\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "24d39a47-a2e6-4614-aa01-627144edb0b5"
+        }, 
+        "11": {
+            "annotation": "Known SNPs from Cosmic database", 
+            "id": 11, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Known SNPs from Cosmic database", 
+                    "name": "COSMIC"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 3605, 
+                "top": 1423
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"COSMIC\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "b84ef8b7-50b1-4aca-b892-f25edd94c218"
+        }, 
+        "12": {
+            "annotation": "", 
+            "id": 12, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Centromere Exclude List"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 3900, 
+                "top": 724
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Centromere Exclude List\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "d69009bf-f730-40ac-8fcc-27b2eabc9157"
+        }, 
+        "13": {
+            "annotation": "", 
+            "id": 13, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Interval BED File"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 3903, 
+                "top": 808
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Interval BED File\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "7f5dd44e-4138-49f6-8abd-7274bf0836c8"
+        }, 
+        "14": {
+            "annotation": "", 
+            "id": 14, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Transcript Override List"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 3892, 
+                "top": 1000
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Transcript Override List\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "51b71cbd-adcc-4425-890e-bed7847eab56"
+        }, 
+        "15": {
+            "annotation": "", 
+            "id": 15, 
+            "input_connections": {
+                "genomeSource|ownFile": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "paired|fastq": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "paired|rfastq": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "BWA-MEM", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "sam"
+                }
+            ], 
+            "position": {
+                "left": 399, 
+                "top": 726
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "bwa_mem", 
+            "tool_state": "{\"genomeSource\": \"{\\\"refGenomeSource\\\": \\\"history\\\", \\\"ownFile\\\": null, \\\"__current_case__\\\": 1}\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"paired\": \"{\\\"rfastq\\\": null, \\\"fastq\\\": null, \\\"sPaired\\\": \\\"paired\\\", \\\"__current_case__\\\": 1}\", \"params\": \"{\\\"minEditDistSeed\\\": \\\"19\\\", \\\"seqMatch\\\": \\\"1\\\", \\\"clipping\\\": \\\"5\\\", \\\"offDiagonal\\\": \\\"100\\\", \\\"seedsOccurrence\\\": \\\"10000\\\", \\\"minScore\\\": \\\"30\\\", \\\"gapOpen\\\": \\\"6\\\", \\\"mismatch\\\": \\\"4\\\", \\\"outputAll\\\": \\\"False\\\", \\\"unpairedReadpair\\\": \\\"17\\\", \\\"gapExtension\\\": \\\"1\\\", \\\"skipPairing\\\": \\\"False\\\", \\\"bandWidth\\\": \\\"100\\\", \\\"readGroup\\\": {\\\"rgpl\\\": \\\"ILLUMINA\\\", \\\"rgpi\\\": \\\"\\\", \\\"rgsm\\\": \\\"tumor\\\", \\\"rgpg\\\": \\\"\\\", \\\"rgid\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"specReadGroup\\\": \\\"yes\\\", \\\"rgds\\\": \\\"\\\", \\\"rgfo\\\": \\\"\\\", \\\"rgdt\\\": \\\"\\\", \\\"__current_case__\\\": 0, \\\"rgpu\\\": \\\"\\\", \\\"rgcn\\\": \\\"\\\", \\\"rglb\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"rgks\\\": \\\"\\\"}, \\\"mateRescue\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"mark\\\": \\\"True\\\", \\\"internalSeeds\\\": \\\"1.5\\\", \\\"source_select\\\": \\\"full\\\"}\", \"suppressHeader\": \"\\\"False\\\"\"}", 
+            "tool_version": "0.7.9", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "5983cdf4-ac55-470f-8ce6-736081101719"
+        }, 
+        "16": {
+            "annotation": "", 
+            "id": 16, 
+            "input_connections": {
+                "genomeSource|ownFile": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "paired|fastq": {
+                    "id": 3, 
+                    "output_name": "output"
+                }, 
+                "paired|rfastq": {
+                    "id": 4, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "BWA-MEM", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "sam"
+                }
+            ], 
+            "position": {
+                "left": 423, 
+                "top": 1410
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "bwa_mem", 
+            "tool_state": "{\"genomeSource\": \"{\\\"refGenomeSource\\\": \\\"history\\\", \\\"ownFile\\\": null, \\\"__current_case__\\\": 1}\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"paired\": \"{\\\"rfastq\\\": null, \\\"fastq\\\": null, \\\"sPaired\\\": \\\"paired\\\", \\\"__current_case__\\\": 1}\", \"params\": \"{\\\"minEditDistSeed\\\": \\\"19\\\", \\\"seqMatch\\\": \\\"1\\\", \\\"clipping\\\": \\\"5\\\", \\\"offDiagonal\\\": \\\"100\\\", \\\"seedsOccurrence\\\": \\\"10000\\\", \\\"minScore\\\": \\\"30\\\", \\\"gapOpen\\\": \\\"6\\\", \\\"mismatch\\\": \\\"4\\\", \\\"outputAll\\\": \\\"False\\\", \\\"unpairedReadpair\\\": \\\"17\\\", \\\"gapExtension\\\": \\\"1\\\", \\\"skipPairing\\\": \\\"False\\\", \\\"bandWidth\\\": \\\"100\\\", \\\"readGroup\\\": {\\\"rgpl\\\": \\\"ILLUMINA\\\", \\\"rgpi\\\": \\\"\\\", \\\"rgsm\\\": \\\"normal\\\", \\\"rgpg\\\": \\\"\\\", \\\"rgid\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"specReadGroup\\\": \\\"yes\\\", \\\"rgds\\\": \\\"\\\", \\\"rgfo\\\": \\\"\\\", \\\"rgdt\\\": \\\"\\\", \\\"__current_case__\\\": 0, \\\"rgpu\\\": \\\"\\\", \\\"rgcn\\\": \\\"\\\", \\\"rglb\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"rgks\\\": \\\"\\\"}, \\\"mateRescue\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"mark\\\": \\\"True\\\", \\\"internalSeeds\\\": \\\"1.5\\\", \\\"source_select\\\": \\\"full\\\"}\", \"suppressHeader\": \"\\\"False\\\"\"}", 
+            "tool_version": "0.7.9", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "90418981-ba1d-47b2-a64d-27ab3d3e5b43"
+        }, 
+        "17": {
+            "annotation": "", 
+            "id": 17, 
+            "input_connections": {
+                "input_file": {
+                    "id": 15, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Picard - Sort Sam", 
+            "outputs": [
+                {
+                    "name": "out_file", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 645, 
+                "top": 719
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "rgPicardSortSam", 
+            "tool_state": "{\"createMd5\": \"\\\"False\\\"\", \"input_file\": \"null\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"quietOn\": \"\\\"True\\\"\", \"compressionLvl\": \"\\\"5\\\"\", \"sortOrder\": \"\\\"coordinate\\\"\", \"createIndex\": \"\\\"False\\\"\", \"maxRamRecords\": \"\\\"5000000\\\"\"}", 
+            "tool_version": "1.110.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "90e4c44c-069f-4921-b647-e5114f31560d"
+        }, 
+        "18": {
+            "annotation": "", 
+            "id": 18, 
+            "input_connections": {
+                "input_file": {
+                    "id": 16, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Picard - Sort Sam", 
+            "outputs": [
+                {
+                    "name": "out_file", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 665, 
+                "top": 1410
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "rgPicardSortSam", 
+            "tool_state": "{\"createMd5\": \"\\\"False\\\"\", \"input_file\": \"null\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"quietOn\": \"\\\"True\\\"\", \"compressionLvl\": \"\\\"5\\\"\", \"sortOrder\": \"\\\"coordinate\\\"\", \"createIndex\": \"\\\"False\\\"\", \"maxRamRecords\": \"\\\"5000000\\\"\"}", 
+            "tool_version": "1.110.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "45311f9a-7c7d-4833-a809-d6cd91a339c2"
+        }, 
+        "19": {
+            "annotation": "", 
+            "id": 19, 
+            "input_connections": {
+                "input_bams_0|input_file": {
+                    "id": 17, 
+                    "output_name": "out_file"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Picard - Mark Duplicates", 
+            "outputs": [
+                {
+                    "name": "out_file", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 957, 
+                "top": 711
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "rgPicardMarkDups", 
+            "tool_state": "{\"createMd5\": \"\\\"False\\\"\", \"ProgramRecordID\": \"\\\"MarkDuplicates\\\"\", \"assumeSorted\": \"\\\"True\\\"\", \"input_bams\": \"[{\\\"__index__\\\": 0, \\\"input_file\\\": null}]\", \"remDups\": \"\\\"True\\\"\", \"readRegex\": \"\\\"[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).*\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"verbosityLvl\": \"\\\"INFO\\\"\", \"quietOn\": \"\\\"True\\\"\", \"out_prefix\": \"\\\"Dupes Marked\\\"\", \"compressionLvl\": \"\\\"5\\\"\", \"sortingRatio\": \"\\\"0.25\\\"\", \"maxFileHandles\": \"\\\"8000\\\"\", \"optDupeDist\": \"\\\"100\\\"\", \"createIndex\": \"\\\"True\\\"\", \"maxRamRecords\": \"\\\"5000000\\\"\"}", 
+            "tool_version": "1.110.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "534b5b36-6337-47a2-9880-a91327741113"
+        }, 
+        "20": {
+            "annotation": "", 
+            "id": 20, 
+            "input_connections": {
+                "input_bams_0|input_file": {
+                    "id": 18, 
+                    "output_name": "out_file"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Picard - Mark Duplicates", 
+            "outputs": [
+                {
+                    "name": "out_file", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 967, 
+                "top": 1407
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "rgPicardMarkDups", 
+            "tool_state": "{\"createMd5\": \"\\\"False\\\"\", \"ProgramRecordID\": \"\\\"MarkDuplicates\\\"\", \"assumeSorted\": \"\\\"True\\\"\", \"input_bams\": \"[{\\\"__index__\\\": 0, \\\"input_file\\\": null}]\", \"remDups\": \"\\\"True\\\"\", \"readRegex\": \"\\\"[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).*\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"verbosityLvl\": \"\\\"INFO\\\"\", \"quietOn\": \"\\\"True\\\"\", \"out_prefix\": \"\\\"Dupes Marked\\\"\", \"compressionLvl\": \"\\\"5\\\"\", \"sortingRatio\": \"\\\"0.25\\\"\", \"maxFileHandles\": \"\\\"8000\\\"\", \"optDupeDist\": \"\\\"100\\\"\", \"createIndex\": \"\\\"True\\\"\", \"maxRamRecords\": \"\\\"5000000\\\"\"}", 
+            "tool_version": "1.110.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "3ac69250-c430-4760-87fb-7be95901a031"
+        }, 
+        "21": {
+            "annotation": "", 
+            "id": 21, 
+            "input_connections": {
+                "reference_source|input_bam": {
+                    "id": 19, 
+                    "output_name": "out_file"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_0|rod_bind_type|input_rod": {
+                    "id": 5, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Realigner Target Creator", 
+            "outputs": [
+                {
+                    "name": "output_interval", 
+                    "type": "gatk_interval"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1270, 
+                "top": 1016
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_realigner_target_creator", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"analysis_param_type\": \"{\\\"analysis_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bam\\\": null, \\\"__current_case__\\\": 1}\", \"rod_bind\": \"[{\\\"__index__\\\": 0, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"indels\\\", \\\"__current_case__\\\": 2, \\\"input_rod\\\": null}}]\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "8d257a31-af73-4040-84f5-9bb0ff990be3"
+        }, 
+        "22": {
+            "annotation": "", 
+            "id": 22, 
+            "input_connections": {
+                "reference_source|input_bam": {
+                    "id": 19, 
+                    "output_name": "out_file"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_0|rod_bind_type|input_rod": {
+                    "id": 5, 
+                    "output_name": "output"
+                }, 
+                "target_intervals": {
+                    "id": 21, 
+                    "output_name": "output_interval"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Indel Realigner", 
+            "outputs": [
+                {
+                    "name": "output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1619, 
+                "top": 703
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_indel_realigner", 
+            "tool_state": "{\"__page__\": 0, \"knowns_only\": \"\\\"False\\\"\", \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"lod_threshold\": \"\\\"5.0\\\"\", \"analysis_param_type\": \"{\\\"max_consensuses\\\": \\\"30\\\", \\\"max_reads_for_consensuses\\\": \\\"120\\\", \\\"no_original_alignment_tags\\\": \\\"False\\\", \\\"consensus_determination_model\\\": \\\"USE_READS\\\", \\\"max_reads_in_memory\\\": \\\"150000\\\", \\\"entropy_threshold\\\": \\\"0.15\\\", \\\"max_positional_move_allowed\\\": \\\"200\\\", \\\"simplify_bam\\\": \\\"False\\\", \\\"analysis_param_type_selector\\\": \\\"advanced\\\", \\\"max_reads_for_realignment\\\": \\\"20000\\\", \\\"__current_case__\\\": 1, \\\"max_insert_size_for_movement\\\": \\\"3000\\\"}\", \"target_intervals\": \"null\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bam\\\": null, \\\"__current_case__\\\": 1}\", \"__rerun_remap_job_id__\": null, \"rod_bind\": \"[{\\\"__index__\\\": 0, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"indels\\\", \\\"__current_case__\\\": 2, \\\"input_rod\\\": null}}]\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "be3aa0e9-fa6a-4ff7-bb6f-2a218a0788c3"
+        }, 
+        "23": {
+            "annotation": "", 
+            "id": 23, 
+            "input_connections": {
+                "reference_source|input_bam": {
+                    "id": 20, 
+                    "output_name": "out_file"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_0|rod_bind_type|input_rod": {
+                    "id": 5, 
+                    "output_name": "output"
+                }, 
+                "target_intervals": {
+                    "id": 21, 
+                    "output_name": "output_interval"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Indel Realigner", 
+            "outputs": [
+                {
+                    "name": "output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1659, 
+                "top": 1415
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_indel_realigner", 
+            "tool_state": "{\"__page__\": 0, \"knowns_only\": \"\\\"False\\\"\", \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"lod_threshold\": \"\\\"5.0\\\"\", \"analysis_param_type\": \"{\\\"max_consensuses\\\": \\\"30\\\", \\\"max_reads_for_consensuses\\\": \\\"120\\\", \\\"no_original_alignment_tags\\\": \\\"False\\\", \\\"consensus_determination_model\\\": \\\"USE_READS\\\", \\\"max_reads_in_memory\\\": \\\"150000\\\", \\\"entropy_threshold\\\": \\\"0.15\\\", \\\"max_positional_move_allowed\\\": \\\"200\\\", \\\"simplify_bam\\\": \\\"False\\\", \\\"analysis_param_type_selector\\\": \\\"advanced\\\", \\\"max_reads_for_realignment\\\": \\\"20000\\\", \\\"__current_case__\\\": 1, \\\"max_insert_size_for_movement\\\": \\\"3000\\\"}\", \"target_intervals\": \"null\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bam\\\": null, \\\"__current_case__\\\": 1}\", \"__rerun_remap_job_id__\": null, \"rod_bind\": \"[{\\\"__index__\\\": 0, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"indels\\\", \\\"__current_case__\\\": 2, \\\"input_rod\\\": null}}]\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "28bd18e5-5189-4de2-9302-1241c1ad4f3a"
+        }, 
+        "24": {
+            "annotation": "", 
+            "id": 24, 
+            "input_connections": {
+                "reference_source|input_bam": {
+                    "id": 22, 
+                    "output_name": "output_bam"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_0|rod_bind_type|input_rod": {
+                    "id": 6, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_1|rod_bind_type|input_rod": {
+                    "id": 5, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_2|rod_bind_type|input_rod": {
+                    "id": 7, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Base Recalibrator", 
+            "outputs": [
+                {
+                    "name": "output_recal", 
+                    "type": "gatk_report"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1970, 
+                "top": 1415
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_base_recalibrator", 
+            "tool_state": "{\"__page__\": 0, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_recal\": \"null\", \"covariates\": \"[\\\"ContextCovariate\\\", \\\"CycleCovariate\\\"]\", \"analysis_param_type\": \"{\\\"force_platform\\\": \\\"default\\\", \\\"deletions_default_quality\\\": \\\"45\\\", \\\"insertions_default_quality\\\": \\\"45\\\", \\\"low_quality_tail\\\": \\\"2\\\", \\\"indels_context_size\\\": \\\"3\\\", \\\"solid_options_type\\\": {\\\"solid_options_type_selector\\\": \\\"default\\\", \\\"__current_case__\\\": 0}, \\\"analysis_param_type_selector\\\": \\\"advanced\\\", \\\"mismatches_default_quality\\\": \\\"-1\\\", \\\"quantizing_levels\\\": \\\"16\\\", \\\"homopolymer_nback\\\": \\\"7\\\", \\\"force_read_group_type\\\": {\\\"force_read_group_type_selector\\\": \\\"default\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 1, \\\"default_platform\\\": \\\"default\\\", \\\"maximum_cycle_value\\\": \\\"500\\\", \\\"default_read_group_type\\\": {\\\"__current_case__\\\": 0, \\\"default_read_group_type_selector\\\": \\\"default\\\"}, \\\"window_size_nqs\\\": \\\"5\\\", \\\"exception_if_no_tile\\\": \\\"False\\\", \\\"mismatches_context_size\\\": \\\"2\\\"}\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bam\\\": null, \\\"__current_case__\\\": 1}\", \"rod_bind\": \"[{\\\"__index__\\\": 0, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"dbsnp\\\", \\\"__current_case__\\\": 0, \\\"input_rod\\\": null}}, {\\\"__index__\\\": 1, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"indels\\\", \\\"__current_case__\\\": 2, \\\"input_rod\\\": null}}, {\\\"__index__\\\": 2, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"snps\\\", \\\"__current_case__\\\": 1, \\\"input_rod\\\": null}}]\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "d194f33e-178a-4dc9-b829-cc2ed5c00663"
+        }, 
+        "25": {
+            "annotation": "", 
+            "id": 25, 
+            "input_connections": {
+                "reference_source|input_bam": {
+                    "id": 23, 
+                    "output_name": "output_bam"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_0|rod_bind_type|input_rod": {
+                    "id": 6, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_1|rod_bind_type|input_rod": {
+                    "id": 5, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_2|rod_bind_type|input_rod": {
+                    "id": 7, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Base Recalibrator", 
+            "outputs": [
+                {
+                    "name": "output_recal", 
+                    "type": "gatk_report"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1938, 
+                "top": 695
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_base_recalibrator", 
+            "tool_state": "{\"__page__\": 0, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_recal\": \"null\", \"covariates\": \"[\\\"ContextCovariate\\\", \\\"CycleCovariate\\\"]\", \"analysis_param_type\": \"{\\\"analysis_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bam\\\": null, \\\"__current_case__\\\": 1}\", \"rod_bind\": \"[{\\\"__index__\\\": 0, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"dbsnp\\\", \\\"__current_case__\\\": 0, \\\"input_rod\\\": null}}, {\\\"__index__\\\": 1, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"indels\\\", \\\"__current_case__\\\": 2, \\\"input_rod\\\": null}}, {\\\"__index__\\\": 2, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"snps\\\", \\\"__current_case__\\\": 1, \\\"input_rod\\\": null}}]\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "c961ce0a-d92f-46da-ab4f-fb752d6d2b80"
+        }, 
+        "26": {
+            "annotation": "", 
+            "id": 26, 
+            "input_connections": {
+                "input_recal": {
+                    "id": 24, 
+                    "output_name": "output_recal"
+                }, 
+                "reference_source|input_bam": {
+                    "id": 23, 
+                    "output_name": "output_bam"
+                }, 
+                "rod_bind_0|rod_bind_type|input_rod": {
+                    "id": 6, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_1|rod_bind_type|input_rod": {
+                    "id": 5, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_2|rod_bind_type|input_rod": {
+                    "id": 7, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Base Recalibrator", 
+            "outputs": [
+                {
+                    "name": "output_recal", 
+                    "type": "gatk_report"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 2228, 
+                "top": 1415
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_base_recalibrator", 
+            "tool_state": "{\"__page__\": 0, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_recal\": \"null\", \"covariates\": \"[\\\"ContextCovariate\\\", \\\"CycleCovariate\\\"]\", \"analysis_param_type\": \"{\\\"analysis_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bam\\\": null, \\\"__current_case__\\\": 1}\", \"rod_bind\": \"[{\\\"__index__\\\": 0, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"dbsnp\\\", \\\"__current_case__\\\": 0, \\\"input_rod\\\": null}}, {\\\"__index__\\\": 1, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"indels\\\", \\\"__current_case__\\\": 2, \\\"input_rod\\\": null}}, {\\\"__index__\\\": 2, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"snps\\\", \\\"__current_case__\\\": 1, \\\"input_rod\\\": null}}]\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "26f6d0a5-9a70-4c15-abd0-eda9145ba2c1"
+        }, 
+        "27": {
+            "annotation": "", 
+            "id": 27, 
+            "input_connections": {
+                "input_recal": {
+                    "id": 25, 
+                    "output_name": "output_recal"
+                }, 
+                "reference_source|input_bam": {
+                    "id": 22, 
+                    "output_name": "output_bam"
+                }, 
+                "rod_bind_0|rod_bind_type|input_rod": {
+                    "id": 6, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_1|rod_bind_type|input_rod": {
+                    "id": 5, 
+                    "output_name": "output"
+                }, 
+                "rod_bind_2|rod_bind_type|input_rod": {
+                    "id": 7, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Base Recalibrator", 
+            "outputs": [
+                {
+                    "name": "output_recal", 
+                    "type": "gatk_report"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 2210, 
+                "top": 698
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_base_recalibrator", 
+            "tool_state": "{\"__page__\": 0, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_recal\": \"null\", \"covariates\": \"[\\\"ContextCovariate\\\", \\\"CycleCovariate\\\"]\", \"analysis_param_type\": \"{\\\"force_platform\\\": \\\"default\\\", \\\"deletions_default_quality\\\": \\\"45\\\", \\\"insertions_default_quality\\\": \\\"45\\\", \\\"low_quality_tail\\\": \\\"2\\\", \\\"indels_context_size\\\": \\\"3\\\", \\\"solid_options_type\\\": {\\\"solid_options_type_selector\\\": \\\"default\\\", \\\"__current_case__\\\": 0}, \\\"analysis_param_type_selector\\\": \\\"advanced\\\", \\\"mismatches_default_quality\\\": \\\"-1\\\", \\\"quantizing_levels\\\": \\\"16\\\", \\\"homopolymer_nback\\\": \\\"7\\\", \\\"force_read_group_type\\\": {\\\"force_read_group_type_selector\\\": \\\"default\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 1, \\\"default_platform\\\": \\\"default\\\", \\\"maximum_cycle_value\\\": \\\"500\\\", \\\"default_read_group_type\\\": {\\\"__current_case__\\\": 0, \\\"default_read_group_type_selector\\\": \\\"default\\\"}, \\\"window_size_nqs\\\": \\\"5\\\", \\\"exception_if_no_tile\\\": \\\"False\\\", \\\"mismatches_context_size\\\": \\\"2\\\"}\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bam\\\": null, \\\"__current_case__\\\": 1}\", \"rod_bind\": \"[{\\\"__index__\\\": 0, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"dbsnp\\\", \\\"__current_case__\\\": 0, \\\"input_rod\\\": null}}, {\\\"__index__\\\": 1, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"indels\\\", \\\"__current_case__\\\": 2, \\\"input_rod\\\": null}}, {\\\"__index__\\\": 2, \\\"rod_bind_type\\\": {\\\"rod_bind_type_selector\\\": \\\"snps\\\", \\\"__current_case__\\\": 1, \\\"input_rod\\\": null}}]\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "94a1ce01-923a-4f97-81a9-60915237f1c5"
+        }, 
+        "28": {
+            "annotation": "", 
+            "id": 28, 
+            "input_connections": {
+                "input_recal": {
+                    "id": 26, 
+                    "output_name": "output_recal"
+                }, 
+                "reference_source|input_bam": {
+                    "id": 23, 
+                    "output_name": "output_bam"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Print Reads", 
+            "outputs": [
+                {
+                    "name": "output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 2502, 
+                "top": 1412
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_print_reads", 
+            "tool_state": "{\"__page__\": 0, \"input_recal\": \"null\", \"__rerun_remap_job_id__\": null, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"analysis_param_type\": \"{\\\"analysis_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bam\\\": null, \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "d91899e5-75f9-4dcc-93f9-9ad5ac04335d"
+        }, 
+        "29": {
+            "annotation": "", 
+            "id": 29, 
+            "input_connections": {
+                "input_recal": {
+                    "id": 27, 
+                    "output_name": "output_recal"
+                }, 
+                "reference_source|input_bam": {
+                    "id": 22, 
+                    "output_name": "output_bam"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Print Reads", 
+            "outputs": [
+                {
+                    "name": "output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 2486, 
+                "top": 727
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_print_reads", 
+            "tool_state": "{\"__page__\": 0, \"input_recal\": \"null\", \"__rerun_remap_job_id__\": null, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"analysis_param_type\": \"{\\\"analysis_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bam\\\": null, \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "4d43fcbb-fb73-433d-aca6-c5c385a53e64"
+        }, 
+        "30": {
+            "annotation": "", 
+            "id": 30, 
+            "input_connections": {
+                "gatk_param_type|input_interval_repeat_0|input_intervals": {
+                    "id": 8, 
+                    "output_name": "output"
+                }, 
+                "reference_source|input_bams_0|input_bam": {
+                    "id": 28, 
+                    "output_name": "output_bam"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Depth of Coverage", 
+            "outputs": [
+                {
+                    "name": "output_per_locus_coverage", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 2768, 
+                "top": 1417
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_depth_of_coverage", 
+            "tool_state": "{\"summary_coverage_threshold_group\": \"[]\", \"__page__\": 0, \"output_format\": \"\\\"table\\\"\", \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"advanced\\\", \\\"pedigree_string_repeat\\\": [], \\\"disable_experimental_low_memory_sharding\\\": \\\"False\\\", \\\"pedigree_validation_type\\\": \\\"STRICT\\\", \\\"pedigree\\\": [], \\\"input_interval_repeat\\\": [{\\\"input_intervals\\\": null, \\\"__index__\\\": 0}], \\\"fix_misencoded_quality_scores\\\": \\\"False\\\", \\\"baq\\\": \\\"OFF\\\", \\\"input_exclude_interval_repeat\\\": [], \\\"default_base_qualities\\\": \\\"0\\\", \\\"downsampling_type\\\": {\\\"downsampling_type_selector\\\": \\\"NONE\\\", \\\"__current_case__\\\": 0}, \\\"interval_merging\\\": \\\"ALL\\\", \\\"interval_set_rule\\\": \\\"UNION\\\", \\\"non_deterministic_random_seed\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"read_filter\\\": [], \\\"validation_strictness\\\": \\\"STRICT\\\", \\\"baq_gap_open_penalty\\\": \\\"40.0\\\", \\\"read_group_black_list_repeat\\\": [], \\\"use_original_qualities\\\": \\\"False\\\"}\", \"analysis_param_type\": \"{\\\"max_mapping_quality\\\": \\\"2147483647\\\", \\\"include_deletions\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"min_mapping_quality\\\": \\\"10\\\", \\\"start\\\": \\\"1\\\", \\\"n_bins\\\": \\\"499\\\", \\\"print_base_counts\\\": \\\"False\\\", \\\"stop\\\": \\\"500\\\", \\\"omit_per_sample_stats\\\": \\\"False\\\", \\\"omit_locus_table\\\": \\\"False\\\", \\\"analysis_param_type_selector\\\": \\\"advanced\\\", \\\"omit_interval_statistics\\\": \\\"True\\\", \\\"min_base_quality\\\": \\\"0\\\", \\\"ignore_deletion_sites\\\": \\\"False\\\", \\\"max_base_quality\\\": \\\"127\\\", \\\"print_bin_endpoints_and_exit\\\": \\\"False\\\", \\\"omit_depth_output_at_each_base\\\": \\\"False\\\"}\", \"input_calculate_coverage_over_genes\": \"null\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bams\\\": [{\\\"__index__\\\": 0, \\\"input_bam\\\": null}], \\\"__current_case__\\\": 1}\", \"__rerun_remap_job_id__\": null, \"partition_type\": \"\\\"sample\\\"\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "912056a8-dc6e-4c8c-a067-cfbdc51d67e5"
+        }, 
+        "31": {
+            "annotation": "", 
+            "id": 31, 
+            "input_connections": {
+                "gatk_param_type|input_interval_repeat_0|input_intervals": {
+                    "id": 8, 
+                    "output_name": "output"
+                }, 
+                "reference_source|input_bams_0|input_bam": {
+                    "id": 28, 
+                    "output_name": "output_bam"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Depth of Coverage", 
+            "outputs": [
+                {
+                    "name": "output_per_locus_coverage", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 3077, 
+                "top": 1416
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_depth_of_coverage", 
+            "tool_state": "{\"summary_coverage_threshold_group\": \"[]\", \"__page__\": 0, \"output_format\": \"\\\"table\\\"\", \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"advanced\\\", \\\"pedigree_string_repeat\\\": [], \\\"disable_experimental_low_memory_sharding\\\": \\\"False\\\", \\\"pedigree_validation_type\\\": \\\"STRICT\\\", \\\"pedigree\\\": [], \\\"input_interval_repeat\\\": [{\\\"input_intervals\\\": null, \\\"__index__\\\": 0}], \\\"fix_misencoded_quality_scores\\\": \\\"False\\\", \\\"baq\\\": \\\"OFF\\\", \\\"input_exclude_interval_repeat\\\": [], \\\"default_base_qualities\\\": \\\"0\\\", \\\"downsampling_type\\\": {\\\"downsampling_type_selector\\\": \\\"NONE\\\", \\\"__current_case__\\\": 0}, \\\"interval_merging\\\": \\\"ALL\\\", \\\"interval_set_rule\\\": \\\"UNION\\\", \\\"non_deterministic_random_seed\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"read_filter\\\": [], \\\"validation_strictness\\\": \\\"STRICT\\\", \\\"baq_gap_open_penalty\\\": \\\"40.0\\\", \\\"read_group_black_list_repeat\\\": [], \\\"use_original_qualities\\\": \\\"False\\\"}\", \"analysis_param_type\": \"{\\\"max_mapping_quality\\\": \\\"2147483647\\\", \\\"include_deletions\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"min_mapping_quality\\\": \\\"10\\\", \\\"start\\\": \\\"1\\\", \\\"n_bins\\\": \\\"499\\\", \\\"print_base_counts\\\": \\\"False\\\", \\\"stop\\\": \\\"500\\\", \\\"omit_per_sample_stats\\\": \\\"False\\\", \\\"omit_locus_table\\\": \\\"False\\\", \\\"analysis_param_type_selector\\\": \\\"advanced\\\", \\\"omit_interval_statistics\\\": \\\"True\\\", \\\"min_base_quality\\\": \\\"30\\\", \\\"ignore_deletion_sites\\\": \\\"False\\\", \\\"max_base_quality\\\": \\\"127\\\", \\\"print_bin_endpoints_and_exit\\\": \\\"False\\\", \\\"omit_depth_output_at_each_base\\\": \\\"False\\\"}\", \"input_calculate_coverage_over_genes\": \"null\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bams\\\": [{\\\"__index__\\\": 0, \\\"input_bam\\\": null}], \\\"__current_case__\\\": 1}\", \"__rerun_remap_job_id__\": null, \"partition_type\": \"\\\"sample\\\"\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "e896c338-83f4-4930-90b4-d4e37636effd"
+        }, 
+        "32": {
+            "annotation": "", 
+            "id": 32, 
+            "input_connections": {
+                "dbsnp_rod_bind_type|dbsnp_input_rod": {
+                    "id": 6, 
+                    "output_name": "output"
+                }, 
+                "gatk_param_type|input_interval_repeat_0|input_intervals": {
+                    "id": 8, 
+                    "output_name": "output"
+                }, 
+                "input_recal": {
+                    "id": 26, 
+                    "output_name": "output_recal"
+                }, 
+                "reference_source|input_bams_0|input_bam": {
+                    "id": 28, 
+                    "output_name": "output_bam"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Haplotype Caller", 
+            "outputs": [
+                {
+                    "name": "output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "graph_out", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "active_region_out", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 3818, 
+                "top": 1790
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_haplotype_caller", 
+            "tool_state": "{\"__page__\": 0, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"advanced\\\", \\\"pedigree_string_repeat\\\": [], \\\"disable_experimental_low_memory_sharding\\\": \\\"False\\\", \\\"pedigree_validation_type\\\": \\\"STRICT\\\", \\\"pedigree\\\": [], \\\"input_interval_repeat\\\": [{\\\"input_intervals\\\": null, \\\"__index__\\\": 0}], \\\"fix_misencoded_quality_scores\\\": \\\"False\\\", \\\"baq\\\": \\\"OFF\\\", \\\"input_exclude_interval_repeat\\\": [], \\\"default_base_qualities\\\": \\\"0\\\", \\\"downsampling_type\\\": {\\\"downsampling_type_selector\\\": \\\"NONE\\\", \\\"__current_case__\\\": 0}, \\\"interval_merging\\\": \\\"ALL\\\", \\\"interval_set_rule\\\": \\\"UNION\\\", \\\"non_deterministic_random_seed\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"read_filter\\\": [], \\\"validation_strictness\\\": \\\"STRICT\\\", \\\"baq_gap_open_penalty\\\": \\\"40.0\\\", \\\"read_group_black_list_repeat\\\": [], \\\"use_original_qualities\\\": \\\"False\\\"}\", \"__rerun_remap_job_id__\": null, \"dbsnp_rod_bind_type\": \"{\\\"dbsnp_rod_bind_type_selector\\\": \\\"set_dbsnp\\\", \\\"dbsnp_input_rod\\\": null, \\\"__current_case__\\\": 1, \\\"dbsnp_rod_name\\\": \\\"dbsnp\\\"}\", \"analysis_param_type\": \"{\\\"analysis_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"input_recal\": \"null\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bams\\\": [{\\\"__index__\\\": 0, \\\"input_bam\\\": null}], \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "725faf8c-d8e4-4240-8d16-538f2e8302ec"
+        }, 
+        "33": {
+            "annotation": "", 
+            "id": 33, 
+            "input_connections": {
+                "gatk_param_type|input_interval_repeat_0|input_intervals": {
+                    "id": 8, 
+                    "output_name": "output"
+                }, 
+                "reference_source|input_bams_0|input_bam": {
+                    "id": 29, 
+                    "output_name": "output_bam"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Depth of Coverage", 
+            "outputs": [
+                {
+                    "name": "output_per_locus_coverage", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 2764, 
+                "top": 200
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_depth_of_coverage", 
+            "tool_state": "{\"summary_coverage_threshold_group\": \"[]\", \"__page__\": 0, \"output_format\": \"\\\"table\\\"\", \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"advanced\\\", \\\"pedigree_string_repeat\\\": [], \\\"disable_experimental_low_memory_sharding\\\": \\\"False\\\", \\\"pedigree_validation_type\\\": \\\"STRICT\\\", \\\"pedigree\\\": [], \\\"input_interval_repeat\\\": [{\\\"input_intervals\\\": null, \\\"__index__\\\": 0}], \\\"fix_misencoded_quality_scores\\\": \\\"False\\\", \\\"baq\\\": \\\"OFF\\\", \\\"input_exclude_interval_repeat\\\": [], \\\"default_base_qualities\\\": \\\"0\\\", \\\"downsampling_type\\\": {\\\"downsampling_type_selector\\\": \\\"NONE\\\", \\\"__current_case__\\\": 0}, \\\"interval_merging\\\": \\\"ALL\\\", \\\"interval_set_rule\\\": \\\"UNION\\\", \\\"non_deterministic_random_seed\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"read_filter\\\": [], \\\"validation_strictness\\\": \\\"STRICT\\\", \\\"baq_gap_open_penalty\\\": \\\"40.0\\\", \\\"read_group_black_list_repeat\\\": [], \\\"use_original_qualities\\\": \\\"False\\\"}\", \"analysis_param_type\": \"{\\\"max_mapping_quality\\\": \\\"2147483647\\\", \\\"include_deletions\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"min_mapping_quality\\\": \\\"10\\\", \\\"start\\\": \\\"1\\\", \\\"n_bins\\\": \\\"499\\\", \\\"print_base_counts\\\": \\\"False\\\", \\\"stop\\\": \\\"500\\\", \\\"omit_per_sample_stats\\\": \\\"False\\\", \\\"omit_locus_table\\\": \\\"False\\\", \\\"analysis_param_type_selector\\\": \\\"advanced\\\", \\\"omit_interval_statistics\\\": \\\"True\\\", \\\"min_base_quality\\\": \\\"30\\\", \\\"ignore_deletion_sites\\\": \\\"False\\\", \\\"max_base_quality\\\": \\\"127\\\", \\\"print_bin_endpoints_and_exit\\\": \\\"False\\\", \\\"omit_depth_output_at_each_base\\\": \\\"False\\\"}\", \"input_calculate_coverage_over_genes\": \"null\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bams\\\": [{\\\"__index__\\\": 0, \\\"input_bam\\\": null}], \\\"__current_case__\\\": 1}\", \"__rerun_remap_job_id__\": null, \"partition_type\": \"\\\"sample\\\"\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "ecae509f-99be-4c68-a71e-944d0ab32365"
+        }, 
+        "34": {
+            "annotation": "", 
+            "id": 34, 
+            "input_connections": {
+                "gatk_param_type|input_interval_repeat_0|input_intervals": {
+                    "id": 8, 
+                    "output_name": "output"
+                }, 
+                "reference_source|input_bams_0|input_bam": {
+                    "id": 29, 
+                    "output_name": "output_bam"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Depth of Coverage", 
+            "outputs": [
+                {
+                    "name": "output_per_locus_coverage", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_sample", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_readgroup", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_interval_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_summary_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_gene_statistics_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_counts_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cumulative_coverage_proportions_library", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 3067, 
+                "top": 200
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_depth_of_coverage", 
+            "tool_state": "{\"summary_coverage_threshold_group\": \"[]\", \"__page__\": 0, \"output_format\": \"\\\"table\\\"\", \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"advanced\\\", \\\"pedigree_string_repeat\\\": [], \\\"disable_experimental_low_memory_sharding\\\": \\\"False\\\", \\\"pedigree_validation_type\\\": \\\"STRICT\\\", \\\"pedigree\\\": [], \\\"input_interval_repeat\\\": [{\\\"input_intervals\\\": null, \\\"__index__\\\": 0}], \\\"fix_misencoded_quality_scores\\\": \\\"False\\\", \\\"baq\\\": \\\"OFF\\\", \\\"input_exclude_interval_repeat\\\": [], \\\"default_base_qualities\\\": \\\"0\\\", \\\"downsampling_type\\\": {\\\"downsampling_type_selector\\\": \\\"NONE\\\", \\\"__current_case__\\\": 0}, \\\"interval_merging\\\": \\\"ALL\\\", \\\"interval_set_rule\\\": \\\"UNION\\\", \\\"non_deterministic_random_seed\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"read_filter\\\": [], \\\"validation_strictness\\\": \\\"STRICT\\\", \\\"baq_gap_open_penalty\\\": \\\"40.0\\\", \\\"read_group_black_list_repeat\\\": [], \\\"use_original_qualities\\\": \\\"False\\\"}\", \"analysis_param_type\": \"{\\\"max_mapping_quality\\\": \\\"2147483647\\\", \\\"include_deletions\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"min_mapping_quality\\\": \\\"10\\\", \\\"start\\\": \\\"1\\\", \\\"n_bins\\\": \\\"499\\\", \\\"print_base_counts\\\": \\\"False\\\", \\\"stop\\\": \\\"500\\\", \\\"omit_per_sample_stats\\\": \\\"False\\\", \\\"omit_locus_table\\\": \\\"False\\\", \\\"analysis_param_type_selector\\\": \\\"advanced\\\", \\\"omit_interval_statistics\\\": \\\"True\\\", \\\"min_base_quality\\\": \\\"0\\\", \\\"ignore_deletion_sites\\\": \\\"False\\\", \\\"max_base_quality\\\": \\\"127\\\", \\\"print_bin_endpoints_and_exit\\\": \\\"False\\\", \\\"omit_depth_output_at_each_base\\\": \\\"False\\\"}\", \"input_calculate_coverage_over_genes\": \"null\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_bams\\\": [{\\\"__index__\\\": 0, \\\"input_bam\\\": null}], \\\"__current_case__\\\": 1}\", \"__rerun_remap_job_id__\": null, \"partition_type\": \"\\\"sample\\\"\"}", 
+            "tool_version": "3.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "71de3103-fb50-49a1-b83b-262910616128"
+        }, 
+        "35": {
+            "annotation": "", 
+            "id": 35, 
+            "input_connections": {
+                "normal": {
+                    "id": 28, 
+                    "output_name": "output_bam"
+                }, 
+                "tumor": {
+                    "id": 29, 
+                    "output_name": "output_bam"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "BreakDancer", 
+            "outputs": [
+                {
+                    "name": "outputBreakpoints", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 3888, 
+                "top": 581
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "breakdancer", 
+            "tool_state": "{\"__page__\": 0, \"normal\": \"null\", \"__rerun_remap_job_id__\": null, \"output_opts\": \"{\\\"more_output\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"tumor\": \"null\", \"defineChrom\": \"{\\\"single_chrom\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"advanced\": \"{\\\"extra_opts\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "30c8dc28-7912-4912-bab8-f0524152b113"
+        }, 
+        "36": {
+            "annotation": "", 
+            "id": 36, 
+            "input_connections": {
+                "cosmic": {
+                    "id": 11, 
+                    "output_name": "output"
+                }, 
+                "dbsnp": {
+                    "id": 6, 
+                    "output_name": "output"
+                }, 
+                "intervalfile": {
+                    "id": 8, 
+                    "output_name": "output"
+                }, 
+                "normal": {
+                    "id": 28, 
+                    "output_name": "output_bam"
+                }, 
+                "reference": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "tumor": {
+                    "id": 29, 
+                    "output_name": "output_bam"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "muTect", 
+            "outputs": [
+                {
+                    "name": "callstats", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "coverage", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "mutations", 
+                    "type": "vcf"
+                }
+            ], 
+            "position": {
+                "left": 3814, 
+                "top": 1255
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "muTect", 
+            "tool_state": "{\"initial_tumor_lod\": \"\\\"4.0\\\"\", \"reference\": \"null\", \"normal\": \"null\", \"__page__\": 0, \"intervalfile\": \"null\", \"__rerun_remap_job_id__\": null, \"cosmic\": \"null\", \"tumor\": \"null\", \"intervals\": \"\\\"\\\"\", \"contamination\": \"{\\\"input\\\": \\\"na\\\", \\\"__current_case__\\\": 2}\", \"tumor_lod\": \"\\\"10.0\\\"\", \"dbsnp\": \"null\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "26401cf2-380c-4ae7-8a04-ecf010b7360b"
+        }, 
+        "37": {
+            "annotation": "", 
+            "id": 37, 
+            "input_connections": {
+                "doc_0": {
+                    "id": 30, 
+                    "output_name": "output_per_locus_coverage"
+                }, 
+                "doc_30": {
+                    "id": 31, 
+                    "output_name": "output_per_locus_coverage"
+                }, 
+                "genes": {
+                    "id": 10, 
+                    "output_name": "output"
+                }, 
+                "interval_file": {
+                    "id": 9, 
+                    "output_name": "output"
+                }, 
+                "probes": {
+                    "id": 8, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Create 3 QC Metrics Sheets", 
+            "outputs": [
+                {
+                    "name": "outfile_exon", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outfile_interval", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outfile_gene", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 3406, 
+                "top": 1785
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "interval_qc", 
+            "tool_state": "{\"__page__\": 0, \"doc_30\": \"null\", \"interval_file\": \"null\", \"__rerun_remap_job_id__\": null, \"genes\": \"null\", \"doc_0\": \"null\", \"probes\": \"null\"}", 
+            "tool_version": "0.1", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "99c8ddca-5686-42ad-8f36-c9731c6d5c88"
+        }, 
+        "38": {
+            "annotation": "", 
+            "id": 38, 
+            "input_connections": {
+                "reference_source|input_variant": {
+                    "id": 32, 
+                    "output_name": "output_vcf"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Variant Filtration", 
+            "outputs": [
+                {
+                    "name": "output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 4112, 
+                "top": 1792
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_variant_filtration", 
+            "tool_state": "{\"__page__\": 0, \"missing_values_in_expressions_should_evaluate_as_failing\": \"\\\"False\\\"\", \"__rerun_remap_job_id__\": null, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"cluster_snp_type\": \"{\\\"cluster_window_size\\\": \\\"15\\\", \\\"cluster_size\\\": \\\"3\\\", \\\"cluster_snp_type_selector\\\": \\\"cluster_snp\\\", \\\"__current_case__\\\": 1}\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_variant\\\": null, \\\"__current_case__\\\": 1}\", \"variant_filters\": \"[{\\\"__index__\\\": 0, \\\"filter_expression\\\": \\\"QD < 5\\\", \\\"is_genotype_filter\\\": \\\"False\\\", \\\"filter_name\\\": \\\"QDFilter\\\"}, {\\\"__index__\\\": 1, \\\"filter_expression\\\": \\\"QUAL < 100\\\", \\\"is_genotype_filter\\\": \\\"False\\\", \\\"filter_name\\\": \\\"QUALFilter\\\"}, {\\\"__index__\\\": 2, \\\"filter_expression\\\": \\\"DP < 10\\\", \\\"is_genotype_filter\\\": \\\"False\\\", \\\"filter_name\\\": \\\"DPFilter\\\"}]\", \"mask_rod_bind_type\": \"{\\\"mask_rod_bind_type_selector\\\": \\\"exclude_mask\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "0.0.7", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "d5e6d0e6-dbe4-47ae-a5ec-7cfcde6e1547"
+        }, 
+        "39": {
+            "annotation": "", 
+            "id": 39, 
+            "input_connections": {
+                "doc_0": {
+                    "id": 34, 
+                    "output_name": "output_per_locus_coverage"
+                }, 
+                "doc_30": {
+                    "id": 33, 
+                    "output_name": "output_per_locus_coverage"
+                }, 
+                "genes": {
+                    "id": 10, 
+                    "output_name": "output"
+                }, 
+                "interval_file": {
+                    "id": 9, 
+                    "output_name": "output"
+                }, 
+                "probes": {
+                    "id": 8, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Create 3 QC Metrics Sheets", 
+            "outputs": [
+                {
+                    "name": "outfile_exon", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outfile_interval", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outfile_gene", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 3428, 
+                "top": 683
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "interval_qc", 
+            "tool_state": "{\"__page__\": 0, \"doc_30\": \"null\", \"interval_file\": \"null\", \"__rerun_remap_job_id__\": null, \"genes\": \"null\", \"doc_0\": \"null\", \"probes\": \"null\"}", 
+            "tool_version": "0.1", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "a718180f-04f0-4417-a748-eac2f4f68067"
+        }, 
+        "40": {
+            "annotation": "", 
+            "id": 40, 
+            "input_connections": {
+                "breakdancer|input1": {
+                    "id": 35, 
+                    "output_name": "outputBreakpoints"
+                }, 
+                "exclude_list": {
+                    "id": 12, 
+                    "output_name": "output"
+                }, 
+                "include_list": {
+                    "id": 13, 
+                    "output_name": "output"
+                }, 
+                "inputReferenceFile": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "inputs|normalInputBamFile": {
+                    "id": 28, 
+                    "output_name": "output_bam"
+                }, 
+                "inputs|tumorInputBamFile": {
+                    "id": 29, 
+                    "output_name": "output_bam"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "pindel", 
+            "outputs": [
+                {
+                    "name": "outputRawFile", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "outputVcfFile", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "outputSomaticVcfFile", 
+                    "type": "vcf"
+                }
+            ], 
+            "position": {
+                "left": 4114, 
+                "top": 585
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "pindel", 
+            "tool_state": "{\"inputs\": \"{\\\"defineInsertSize\\\": {\\\"manual_define\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"__current_case__\\\": 1, \\\"normalInputBamFile\\\": null, \\\"somatic_hom\\\": \\\"6\\\", \\\"mode\\\": \\\"pair\\\", \\\"tumorInputBamFile\\\": null, \\\"somatic_cov\\\": \\\"20\\\", \\\"somatic_vaf\\\": \\\"0.08\\\"}\", \"sensitivity\": \"\\\"0.95\\\"\", \"inputBamFile\": \"null\", \"include_list\": \"null\", \"reportInversions\": \"\\\"True\\\"\", \"report_only_close_mapped_reads\": \"\\\"False\\\"\", \"options_sensel\": \"{\\\"__current_case__\\\": 0, \\\"maximum_allowed_mismatch_rate\\\": \\\"0.02\\\", \\\"NM\\\": \\\"2\\\", \\\"max_range_index\\\": \\\"3\\\", \\\"NormalSamples\\\": \\\"False\\\", \\\"min_perfect_match_around_BP\\\": \\\"3\\\", \\\"options_sensel_selector\\\": \\\"yes\\\", \\\"balance_cutoff\\\": \\\"0\\\", \\\"anchor_quality\\\": \\\"20\\\", \\\"min_num_matched_bases\\\": \\\"30\\\", \\\"sensitivity\\\": \\\"0.95\\\", \\\"sequencing_error_rate\\\": \\\"0.01\\\", \\\"minimum_support_for_event\\\": \\\"5\\\", \\\"additional_mismatch\\\": \\\"2\\\"}\", \"exclude_list\": \"null\", \"window_size\": \"\\\"5\\\"\", \"inputBamFiles\": \"[{\\\"__index__\\\": 0, \\\"inputBamFile\\\": null}, {\\\"__index__\\\": 1, \\\"inputBamFile\\\": null}]\", \"NM\": \"\\\"2\\\"\", \"reportLongInsertions\": \"\\\"False\\\"\", \"inputReferenceFile\": \"null\", \"__rerun_remap_job_id__\": null, \"breakdancer\": \"{\\\"checking\\\": \\\"yes\\\", \\\"input1\\\": null, \\\"__current_case__\\\": 0}\", \"referenceName\": \"\\\"HG19\\\"\", \"minimum_support_for_event\": \"\\\"5\\\"\", \"additional_mismatch\": \"\\\"1\\\"\", \"reportBreakpoints\": \"\\\"False\\\"\", \"options_which\": \"{\\\"__current_case__\\\": 0, \\\"reportLongInsertions\\\": \\\"False\\\", \\\"report_interchromosomal_events\\\": \\\"False\\\", \\\"options_DD\\\": {\\\"options_DD_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"min_inversion_size\\\": \\\"50\\\", \\\"reportInversions\\\": \\\"True\\\", \\\"options_which_selector\\\": \\\"yes\\\", \\\"report_only_close_mapped_reads\\\": \\\"False\\\", \\\"reportDuplications\\\": \\\"True\\\", \\\"reportBreakpoints\\\": \\\"True\\\"}\", \"options_miscellaneous\": \"{\\\"exclude_list\\\": null, \\\"options_miscellaneous_selector\\\": \\\"yes\\\", \\\"include_list\\\": null, \\\"__current_case__\\\": 0, \\\"breakdancer\\\": {\\\"checking\\\": \\\"yes\\\", \\\"__current_case__\\\": 0, \\\"break_input\\\": null}, \\\"input_SV_Calls_for_assembly\\\": {\\\"checking\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"IndelCorrection\\\": \\\"False\\\"}\", \"sampleTag\": \"\\\"sample\\\"\", \"__page__\": 0, \"options_DD\": \"{\\\"options_DD_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"anchor_quality\": \"\\\"10\\\"\", \"options_runtime\": \"{\\\"options_runtime_selector\\\": \\\"yes\\\", \\\"window_size\\\": \\\"5\\\", \\\"__current_case__\\\": 0}\", \"reportDuplications\": \"\\\"True\\\"\", \"IndelCorrection\": \"\\\"False\\\"\", \"defineInsertSize\": \"{\\\"manual_define\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"maximum_allowed_mismatch_rate\": \"\\\"0.02\\\"\", \"max_range_index\": \"\\\"3\\\"\", \"min_num_matched_bases\": \"\\\"30\\\"\", \"NormalSamples\": \"\\\"False\\\"\", \"min_perfect_match_around_BP\": \"\\\"3\\\"\", \"report_interchromosomal_events\": \"\\\"False\\\"\", \"min_inversion_size\": \"\\\"50\\\"\", \"balance_cutoff\": \"\\\"100\\\"\", \"sampleTags\": \"[{\\\"__index__\\\": 0, \\\"sampleTag\\\": \\\"tumor\\\"}, {\\\"__index__\\\": 1, \\\"sampleTag\\\": \\\"normal\\\"}]\", \"sequencing_error_rate\": \"\\\"0.01\\\"\", \"input_SV_Calls_for_assembly\": \"{\\\"checking\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "0.0.1", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "d236af8b-bdf4-450e-9256-336291b98136"
+        }, 
+        "41": {
+            "annotation": "", 
+            "id": 41, 
+            "input_connections": {
+                "genome_dict": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "vcf_input": {
+                    "id": 36, 
+                    "output_name": "mutations"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "VCF Sorter", 
+            "outputs": [
+                {
+                    "name": "vcf_output", 
+                    "type": "vcf"
+                }
+            ], 
+            "position": {
+                "left": 4030, 
+                "top": 1259
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "vcfsorter", 
+            "tool_state": "{\"genome_dict\": \"null\", \"__rerun_remap_job_id__\": null, \"vcf_input\": \"null\", \"__page__\": 0}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "214b47a6-b489-4202-89fc-67926f5fa09e"
+        }, 
+        "42": {
+            "annotation": "", 
+            "id": 42, 
+            "input_connections": {
+                "input_type|input": {
+                    "id": 38, 
+                    "output_name": "output_vcf"
+                }, 
+                "override": {
+                    "id": 14, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Oncotator", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "maf"
+                }
+            ], 
+            "position": {
+                "left": 4341, 
+                "top": 1781
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "oncotator", 
+            "tool_state": "{\"__page__\": 0, \"input_type\": \"{\\\"input\\\": null, \\\"__current_case__\\\": 0, \\\"input_select\\\": \\\"VCF\\\"}\", \"skip_no_alt\": \"\\\"False\\\"\", \"prepend\": \"\\\"False\\\"\", \"build\": \"{\\\"build_select\\\": \\\"hg19\\\", \\\"__current_case__\\\": 0}\", \"override\": \"null\", \"infer_onps\": \"\\\"False\\\"\", \"__rerun_remap_job_id__\": null, \"datasource\": \"\\\"/home/groups/clinical/RichardsLab/resources/oncotator/oncotator_v1_ds_Jan262014\\\"\"}", 
+            "tool_version": "v1.5.0.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "004d55bc-6d00-46a2-bde3-85c737856aab"
+        }, 
+        "43": {
+            "annotation": "", 
+            "id": 43, 
+            "input_connections": {
+                "input_vcf": {
+                    "id": 40, 
+                    "output_name": "outputVcfFile"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Remove DUP:TANDEM tag.", 
+            "outputs": [
+                {
+                    "name": "output_vcf", 
+                    "type": "vcf"
+                }
+            ], 
+            "position": {
+                "left": 4355, 
+                "top": 582.5
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "rem_dup_tandem", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_vcf\": \"null\"}", 
+            "tool_version": "0.1", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "0da75c38-997d-4568-90f0-6be920abfe07"
+        }, 
+        "44": {
+            "annotation": "", 
+            "id": 44, 
+            "input_connections": {
+                "gatk_param_type|input_interval_repeat_0|input_intervals": {
+                    "id": 8, 
+                    "output_name": "output"
+                }, 
+                "reference_source|input_variant": {
+                    "id": 41, 
+                    "output_name": "vcf_output"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Select Variants", 
+            "outputs": [
+                {
+                    "name": "output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 4286, 
+                "top": 1259
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_variant_select", 
+            "tool_state": "{\"exclude_filtered\": \"\\\"True\\\"\", \"exclude_sample_name_repeat\": \"[{\\\"__index__\\\": 0, \\\"exclude_sample_name\\\": \\\"normal\\\"}]\", \"__page__\": 0, \"sample_name_repeat\": \"[]\", \"__rerun_remap_job_id__\": null, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"advanced\\\", \\\"pedigree_string_repeat\\\": [], \\\"disable_experimental_low_memory_sharding\\\": \\\"False\\\", \\\"pedigree_validation_type\\\": \\\"STRICT\\\", \\\"pedigree\\\": [], \\\"input_interval_repeat\\\": [{\\\"input_intervals\\\": null, \\\"__index__\\\": 0}], \\\"fix_misencoded_quality_scores\\\": \\\"False\\\", \\\"baq\\\": \\\"OFF\\\", \\\"input_exclude_interval_repeat\\\": [], \\\"default_base_qualities\\\": \\\"0\\\", \\\"downsampling_type\\\": {\\\"downsampling_type_selector\\\": \\\"NONE\\\", \\\"__current_case__\\\": 0}, \\\"interval_merging\\\": \\\"ALL\\\", \\\"interval_set_rule\\\": \\\"UNION\\\", \\\"non_deterministic_random_seed\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"read_filter\\\": [], \\\"validation_strictness\\\": \\\"STRICT\\\", \\\"baq_gap_open_penalty\\\": \\\"40.0\\\", \\\"read_group_black_list_repeat\\\": [], \\\"use_original_qualities\\\": \\\"False\\\"}\", \"input_discordance\": \"null\", \"analysis_param_type\": \"{\\\"analysis_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"input_concordance\": \"null\", \"select_expressions_repeat\": \"[]\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_variant\\\": null, \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "0.0.7", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "e537136c-968f-4259-86fe-baff0e7d2ac1"
+        }, 
+        "45": {
+            "annotation": "", 
+            "id": 45, 
+            "input_connections": {
+                "gatk_param_type|input_interval_repeat_0|input_intervals": {
+                    "id": 8, 
+                    "output_name": "output"
+                }, 
+                "reference_source|input_variant": {
+                    "id": 43, 
+                    "output_name": "output_vcf"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Variant Filtration", 
+            "outputs": [
+                {
+                    "name": "output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 4602, 
+                "top": 579
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_variant_filtration", 
+            "tool_state": "{\"__page__\": 0, \"missing_values_in_expressions_should_evaluate_as_failing\": \"\\\"False\\\"\", \"__rerun_remap_job_id__\": null, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"advanced\\\", \\\"pedigree_string_repeat\\\": [], \\\"disable_experimental_low_memory_sharding\\\": \\\"False\\\", \\\"pedigree_validation_type\\\": \\\"STRICT\\\", \\\"pedigree\\\": [], \\\"input_interval_repeat\\\": [{\\\"input_intervals\\\": null, \\\"__index__\\\": 0}], \\\"fix_misencoded_quality_scores\\\": \\\"False\\\", \\\"baq\\\": \\\"OFF\\\", \\\"input_exclude_interval_repeat\\\": [], \\\"default_base_qualities\\\": \\\"0\\\", \\\"downsampling_type\\\": {\\\"downsampling_type_selector\\\": \\\"NONE\\\", \\\"__current_case__\\\": 0}, \\\"interval_merging\\\": \\\"ALL\\\", \\\"interval_set_rule\\\": \\\"UNION\\\", \\\"non_deterministic_random_seed\\\": \\\"False\\\", \\\"__current_case__\\\": 1, \\\"read_filter\\\": [], \\\"validation_strictness\\\": \\\"STRICT\\\", \\\"baq_gap_open_penalty\\\": \\\"40.0\\\", \\\"read_group_black_list_repeat\\\": [], \\\"use_original_qualities\\\": \\\"False\\\"}\", \"cluster_snp_type\": \"{\\\"cluster_snp_type_selector\\\": \\\"do_not_cluster_snp\\\", \\\"__current_case__\\\": 0}\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_variant\\\": null, \\\"__current_case__\\\": 1}\", \"variant_filters\": \"[{\\\"__index__\\\": 0, \\\"filter_expression\\\": \\\"HOMLEN > 50\\\", \\\"is_genotype_filter\\\": \\\"False\\\", \\\"filter_name\\\": \\\"HOMLEN\\\"}]\", \"mask_rod_bind_type\": \"{\\\"mask_rod_bind_type_selector\\\": \\\"exclude_mask\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "0.0.7", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "9a07526e-3687-4abd-8d8d-c0dd782704f5"
+        }, 
+        "46": {
+            "annotation": "", 
+            "id": 46, 
+            "input_connections": {
+                "input_type|input": {
+                    "id": 44, 
+                    "output_name": "output_vcf"
+                }, 
+                "override": {
+                    "id": 14, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Oncotator", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "maf"
+                }
+            ], 
+            "position": {
+                "left": 4575, 
+                "top": 1264
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "oncotator", 
+            "tool_state": "{\"__page__\": 0, \"input_type\": \"{\\\"input\\\": null, \\\"__current_case__\\\": 0, \\\"input_select\\\": \\\"VCF\\\"}\", \"skip_no_alt\": \"\\\"False\\\"\", \"prepend\": \"\\\"False\\\"\", \"build\": \"{\\\"build_select\\\": \\\"hg19\\\", \\\"__current_case__\\\": 0}\", \"override\": \"null\", \"infer_onps\": \"\\\"False\\\"\", \"__rerun_remap_job_id__\": null, \"datasource\": \"\\\"/home/groups/clinical/RichardsLab/resources/oncotator/oncotator_v1_ds_Jan262014\\\"\"}", 
+            "tool_version": "v1.5.0.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "12b2573d-4c36-41c4-b47f-86e0a9c74d4a"
+        }, 
+        "47": {
+            "annotation": "", 
+            "id": 47, 
+            "input_connections": {
+                "reference_source|input_variant": {
+                    "id": 45, 
+                    "output_name": "output_vcf"
+                }, 
+                "reference_source|ref_file": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Select Variants", 
+            "outputs": [
+                {
+                    "name": "output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 4907, 
+                "top": 582
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "gatk2_variant_select", 
+            "tool_state": "{\"exclude_filtered\": \"\\\"True\\\"\", \"exclude_sample_name_repeat\": \"[]\", \"__page__\": 0, \"sample_name_repeat\": \"[]\", \"__rerun_remap_job_id__\": null, \"gatk_param_type\": \"{\\\"gatk_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"input_discordance\": \"null\", \"analysis_param_type\": \"{\\\"analysis_param_type_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}\", \"input_concordance\": \"null\", \"select_expressions_repeat\": \"[]\", \"reference_source\": \"{\\\"ref_file\\\": null, \\\"reference_source_selector\\\": \\\"history\\\", \\\"input_variant\\\": null, \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "0.0.7", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "b24e2daf-5ba2-4471-9bd8-ed516da6fec0"
+        }, 
+        "48": {
+            "annotation": "", 
+            "id": 48, 
+            "input_connections": {
+                "input_type|input": {
+                    "id": 47, 
+                    "output_name": "output_vcf"
+                }, 
+                "override": {
+                    "id": 14, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Oncotator", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "maf"
+                }
+            ], 
+            "position": {
+                "left": 5195, 
+                "top": 583
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "oncotator", 
+            "tool_state": "{\"__page__\": 0, \"input_type\": \"{\\\"input\\\": null, \\\"__current_case__\\\": 0, \\\"input_select\\\": \\\"VCF\\\"}\", \"skip_no_alt\": \"\\\"False\\\"\", \"prepend\": \"\\\"False\\\"\", \"build\": \"{\\\"build_select\\\": \\\"hg19\\\", \\\"__current_case__\\\": 0}\", \"override\": \"null\", \"infer_onps\": \"\\\"False\\\"\", \"__rerun_remap_job_id__\": null, \"datasource\": \"\\\"/home/groups/clinical/RichardsLab/resources/oncotator/oncotator_v1_ds_Jan262014\\\"\"}", 
+            "tool_version": "v1.5.0.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "0da24062-f59d-44f1-b2f2-594905083a2f"
+        }
+    }, 
+    "uuid": "9f4e3356-a2a7-4a3d-8578-df08b9112b16"
+}
